@@ -1,0 +1,68 @@
+/* Contact page-only enhancements. Homepage and other pages are intentionally untouched. */
+.page-contact .contact-hero{position:relative;overflow:hidden;isolation:isolate;background:#071c33}
+.page-contact .contact-hero-media{position:absolute;inset:0;z-index:-3;overflow:hidden}
+.page-contact .contact-hero-slide{position:absolute;inset:-2%;opacity:0;background:center/cover no-repeat;animation:contactHeroMotion 40s linear infinite;will-change:opacity,transform}
+.page-contact .contact-hero-slide--1{background-image:url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2200&q=88')}
+.page-contact .contact-hero-slide--2{background-image:url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=2200&q=88');animation-delay:8s}
+.page-contact .contact-hero-slide--3{background-image:url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=2200&q=88');animation-delay:16s}
+.page-contact .contact-hero-slide--4{background-image:url('https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=2200&q=88');animation-delay:24s}
+.page-contact .contact-hero-slide--5{background-image:url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=2200&q=88');animation-delay:32s}
+.page-contact .contact-hero-overlay{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(3,20,36,.9) 0%,rgba(5,28,48,.78) 48%,rgba(6,24,42,.56) 100%)}
+.page-contact .contact-hero .container{position:relative;z-index:1}
+@keyframes contactHeroMotion{
+  0%{opacity:0;transform:scale(1)}
+  3%,18%{opacity:1;transform:scale(1.035)}
+  22%,100%{opacity:0;transform:scale(1.095)}
+}
+
+.page-contact .contact-hero h1{text-shadow:0 4px 28px rgba(0,0,0,.28)}
+.page-contact .contact-hero p{max-width:720px;color:#dbe8ef;line-height:1.7}
+.page-contact .contact-hero .breadcrumb{color:#9ed9f3}
+
+/* Contact / quote section refinement */
+.page-contact #quote .split{gap:68px}
+.page-contact #quote .check-list{margin-top:28px}
+.page-contact #quote .check{padding:10px 0}
+.page-contact #quote .check i{box-shadow:0 8px 18px rgba(46,141,194,.12)}
+.page-contact .form-card{border:1px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(135deg,#2e8dc2,#b73578) border-box;box-shadow:0 24px 55px rgba(12,35,59,.10)}
+.page-contact .form-card h3{font-size:1.55rem}
+.page-contact .full-form .field label{font-size:11px;font-weight:800;color:#173b57}
+.page-contact .full-form input,.page-contact .full-form select,.page-contact .full-form textarea{min-height:50px}
+.page-contact .full-form textarea{min-height:118px}
+.page-contact .form-note{font-size:10.5px;line-height:1.55}
+
+/* Map / location polish */
+.page-contact .map-frame{border-radius:24px;border:1px solid #c8dbe7;box-shadow:0 18px 46px rgba(12,35,59,.08)}
+.page-contact .location-chips{margin-top:18px;gap:10px}
+.page-contact .location-chip{border-color:#c6d9e5;background:#fff}
+
+/* Estimator should support the quote journey without competing with it. */
+.page-contact .calculator-wrap{align-items:stretch}
+.page-contact .calculator-panel,.page-contact .calculator-result{border-radius:24px}
+
+/* Urgent requirement: keep the dark premium treatment but add operational depth. */
+.page-contact .contact-urgent-cta{position:relative;overflow:hidden;background:
+  linear-gradient(90deg,rgba(4,24,42,.94),rgba(10,35,58,.84)),
+  url('https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=2200&q=88') center 56%/cover no-repeat;
+  border:1px solid rgba(91,190,232,.28);box-shadow:0 22px 50px rgba(12,35,59,.12)}
+.page-contact .contact-urgent-cta::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 45%,rgba(183,53,120,.15),transparent 32%);pointer-events:none}
+.page-contact .contact-urgent-cta .cta-grid{position:relative;z-index:1}
+.page-contact .contact-urgent-cta p{color:#cad9e3;max-width:720px}
+
+/* Platform-coloured social buttons on the Contact page only. */
+.page-contact .footer-social .social-icon{color:#fff;border:0;box-shadow:0 9px 20px rgba(0,0,0,.18)}
+.page-contact .footer-social .social-icon:nth-child(1){background:#1877f2}
+.page-contact .footer-social .social-icon:nth-child(2){background:linear-gradient(135deg,#f9ce34,#ee2a7b 52%,#6228d7)}
+.page-contact .footer-social .social-icon:nth-child(3){background:#0a66c2}
+.page-contact .footer-social .social-icon:nth-child(4){background:#25d366}
+
+@media(max-width:760px){
+  .page-contact .contact-hero-overlay{background:linear-gradient(180deg,rgba(4,24,42,.86),rgba(5,28,48,.74))}
+  .page-contact #quote .split{gap:34px}
+  .page-contact .form-card{padding:24px}
+  .page-contact .contact-urgent-cta{background-position:center}
+}
+@media(prefers-reduced-motion:reduce){
+  .page-contact .contact-hero-slide{animation:none;opacity:0;transform:none}
+  .page-contact .contact-hero-slide--1{opacity:1}
+}
